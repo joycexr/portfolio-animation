@@ -4,22 +4,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Joyce Rousseau</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 100px auto;
-      padding: 24px;
-      background: #f7f4ef;
-      color: #242424;
-    }
-    h1 { font-size: 3rem; }
-  </style>
+  <meta name="description" content="Portfolio d'animation et d'illustration.">
+  <title>Joyce Rousseau — Animation & Illustration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Joyce Rousseau</h1>
-  <p>Artiste en animation</p>
-  <p>Bienvenue sur mon portfolio !</p>
+  <header class="navbar">
+    <a class="logo" href="#accueil">Joyce Rousseau <span>Animation & Illustration</span></a>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-text">
+        <p class="eyebrow">Bienvenue sur mon portfolio</p>
+        <h1>J'adore SHREK !!!!</h1>
+        <p class="intro">
+          Je suis Joyce, animatrice 2D / 3D.
+          Je suis Shrek Addict et j'aime créer des Shreks. 
+        </p>
+        <a class="button" href="#demo">▶ Voir la bande démo</a>
+      </div>
+
+      <a class="demo-preview" href="#demo" aria-label="Découvrir la bande démo">
+        <img src="assets/thumbnails/shrek_dancing.gif"
+             alt="Aperçu de la bande démo">
+        <span class="play">▶</span>
+      </a>
+    </section>
+
+    <section class="projects section" id="projets">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Mes projets</p>
+          <h2>Quelques travaux récents</h2>
+        </div>
+        <div class="filters" aria-label="Filtrer les projets">
+          <button class="filter active" data-filter="all">Tous</button>
+          <button class="filter" data-filter="animation2d">Animation 2D</button>
+          <button class="filter" data-filter="animation3d">Animation 3D</button>
+          <button class="filter" data-filter="illustration">Illustration</button>
+          <button class="filter" data-filter="personnel">Personnel</button>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-card" data-category="animation2d" href="#contact">
+          <img src="assets/thumbnails/shrek1.jpeg" alt="Projet Skyline">
+          <div class="project-info">
+            <h3>Skyline</h3><span>Animation 2D</span>
+          </div>
+        </a>
+        <a class="project-card" data-category="animation3d" href="#contact">
+          <img src="assets/thumbnails/shrek2.jpg" alt="Projet Little Whiskers">
+          <div class="project-info">
+            <h3>Little Whiskers</h3><span>Animation 3D</span>
+          </div>
+        </a>
+        <a class="project-card" data-category="illustration" href="#contact">
+          <img src="assets/thumbnails/shrek3.jpeg" alt="Illustration Le Phare">
+          <div class="project-info">
+            <h3>Le Phare</h3><span>Illustration</span>
+          </div>
+        </a>
+        <a class="project-card" data-category="illustration" href="#contact">
+          <img src="assets/thumbnails/shrek4.jpg" alt="Études de storyboard">
+          <div class="project-info">
+            <h3>L'Échappée</h3><span>Storyboard</span>
+          </div>
+        </a>
+        <a class="project-card" data-category="animation2d" href="#contact">
+          <img src="assets/thumbnails/shrek5.jpeg" alt="Projet Racines">
+          <div class="project-info">
+            <h3>Racines</h3><span>Animation 2D</span>
+          </div>
+        </a>
+        <a class="project-card" data-category="personnel" href="#contact">
+          <img src="assets/thumbnails/shrek6.jpeg" alt="Étude de character design">
+          <div class="project-info">
+            <h3>Character Design</h3><span>Projet personnel</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="demo-section section" id="demo">
+      <div>
+        <p class="eyebrow">Bande démo</p>
+        <h2>Un aperçu de mon univers</h2>
+        <p>Retrouvez ici une sélection de mes travaux en animation.</p>
+      </div>
+      <!-- Remplacer l'URL par la vidéo hébergée de ton amie. -->
+      <div class="video-placeholder">
+        <img src="assets/thumbnails/shrek_dancing.gif" alt="Étude de character design">
+      </div>
+    </section>
+
+    <section class="about section" id="apropos">
+      <div>
+        <p class="eyebrow">À propos</p>
+        <h2>Une passion pour le mouvement et les émotions.</h2>
+        <p>
+          Je suis animatrice et illustratrice. J'aime raconter
+          des histoires en images, donner vie à des personnages
+          et explorer différents styles, de la 2D à la 3D.
+        </p>
+      </div>
+      <div id="contact">
+        <p class="eyebrow">Travaillons ensemble</p>
+        <h2>Un projet en tête ?</h2>
+        <a class="button" href="mailto:contact@example.com">Me contacter</a>
+        <p class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">ArtStation</a>
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Joyce Rousseau. Tous droits réservés.</p>
+    <a href="#accueil">Retour en haut ↑</a>
+  </footer>
 </body>
 </html>
